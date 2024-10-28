@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Raw Material Management Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header text-center">
+            <h2>Item Report Form</h2>
+        </div>
+        <form id="itemform" method="post">
+            <div class="form-group row">
+                <label class="col-form-label col-sm-3 text-center my-auto">Item ID : </label>
+                <div class="col-sm-9">
+                    <input type="number" id="itemid" class="form-control" onchange="getItemFromItemID()">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-sm-3 text-center m-auto">Item Name : </label>
+                <div class="col-sm-9">
+                    <input type="text" id="itemname" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-sm-3 text-center m-auto">Opening Stock : </label>
+                <div class="col-sm-9">
+                    <input type="number" id="opstock" class="form-control">
+                </div>
+            </div>
+        </form>
+        <div>
+            <nav class="navbar navbar-default text-center" style="border:none">
+                <button type="button" class="btn btn-lg btn-primary" id="first" onclick="getFirst()">First</button>
+                <button type="button" class="btn btn-lg btn-primary" id="prev" onclick="getPrev()">Previous</button>
+                <button type="button" class="btn btn-lg btn-primary" id="next" onclick="getNext()" disabled>Next</button>
+                <button type="button" class="btn btn-lg btn-primary" id="last" onclick="getLast()">Last</button>
+            </nav>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+    <script type="text/javascript" src="js/indexd.js"></script>
+</body>
+</html>
